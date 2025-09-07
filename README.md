@@ -38,7 +38,19 @@ The app layout includes:
 - A “Convert” button and result card.
 - Swap button to flip units.
 
-![App Screenshot](screenshot.png)
+## Screenshots
+### For IOS App
+![App Screenshot](screenshot1.png)
+
+### For Android App
+![App Screenshot](screenshot2.png)
+
+### For Chrome OS
+![App Screenshot](screenshot3.png)
+![App Screenshot](screenshot4.png)
+
+### For IOS Desktop
+![App Screenshot](screenshot5.png)
 
 ## 📌 GitHub Repository
 https://github.com/rutushah/MSCS-533-M50_Conversion_Application
