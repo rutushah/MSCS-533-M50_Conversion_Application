@@ -18,10 +18,10 @@ The app supports:
 - Dropdown menus for unit selection.
 - Swap button to switch “From” and “To” units.
 - Real-time error handling for invalid input.
-- Results displayed clearly in a result card.
+- Results are displayed clearly in a result card.
 
 ## Project Structure
-- **main.dart** → Entry point of the application, sets theme and home screen.
+- **main.dart** → Entry point of the application, sets the theme and home screen.
 - **homescreen.dart** → UI layout with input field, dropdowns, buttons, and result display.
 - **logic.dart** → Conversion logic using a `UnitCatalog` class with base units and conversion factors.
 
@@ -31,7 +31,7 @@ The app supports:
 - Android Emulator / iOS Simulator / Physical Device / Desktop Mac OS / Chrome browser.
 - GitHub account for source code hosting.
 
-## 📸 Output
+## Output
 The app layout includes:
 - A text field to input values.
 - Dropdowns to choose units.
@@ -41,4 +41,4 @@ The app layout includes:
 ![App Screenshot](screenshot.png)
 
 ## 📌 GitHub Repository
-[Your Repository Link Here]
+[https://github.com/rutushah/MSCS-533-M50_Conversion_Application]
