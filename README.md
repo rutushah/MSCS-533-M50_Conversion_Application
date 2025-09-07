@@ -41,4 +41,4 @@ The app layout includes:
 ![App Screenshot](screenshot.png)
 
 ## 📌 GitHub Repository
-[https://github.com/rutushah/MSCS-533-M50_Conversion_Application]
+https://github.com/rutushah/MSCS-533-M50_Conversion_Application
