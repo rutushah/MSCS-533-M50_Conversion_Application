@@ -1,12 +1,10 @@
 /// Simple unit conversion by normalizing to a base unit per category.
 class UnitCatalog {
-  // Categories -> base unit
   static const Map<String, String> _base = {
     'length': 'meters',
     'mass': 'grams',
   };
 
-  // Unit -> (category, factor to base)
   // For length, base = meters. For mass, base = grams.
   static const Map<String, (String category, double toBase)> _units = {
     // length

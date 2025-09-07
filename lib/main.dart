@@ -10,7 +10,6 @@ class ConversionApp extends StatelessWidget {
 
   //variable declaration section
   
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {

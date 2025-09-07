@@ -15,8 +15,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
   String? _fromUnit;
   String? _toUnit;
-  String? _errorText;
-  String? _conversionResult;
+  String? _errorMessage;
+  String? _result;
 
   late final List<String> _units;
 
@@ -34,27 +34,27 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _performConversion() {
     setState(() {
-      _errorText = null;
-      _conversionResult = null;
+      _errorMessage = null;
+      _result = null;
 
       final raw = _valueController.text.trim();
       final value = double.tryParse(raw);
       if (value == null) {
-        _errorText = 'Please enter a valid number';
+        _errorMessage = 'Please enter a valid number';
         return;
       }
       if (_fromUnit == null || _toUnit == null || _fromUnit!.isEmpty || _toUnit!.isEmpty) {
-        _errorText = 'Please select both units';
+        _errorMessage = 'Please select both units';
         return;
       }
 
       final result = convertUnits(value, _fromUnit!, _toUnit!);
       if (result == null) {
-        _errorText = 'Conversion not possible between selected units';
+        _errorMessage = 'Conversion not possible between selected units';
         return;
       }
 
-      _conversionResult = result.toStringAsFixed(3);
+      _result = result.toStringAsFixed(3);
     });
   }
 
@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
               controller: _valueController,
               decoration: InputDecoration(
                 hintText: 'Enter value to convert',
-                errorText: _errorText,
+                errorText: _errorMessage,
                 border: const OutlineInputBorder(),
               ),
               keyboardType: const TextInputType.numberWithOptions(decimal: true, signed: false),
@@ -150,12 +150,12 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 20),
 
-            if (_conversionResult != null)
+            if (_result != null)
               _ResultCard(
                 inputValue: _valueController.text.trim(),
                 fromUnit: _fromUnit!,
                 toUnit: _toUnit!,
-                result: _conversionResult!,
+                result: _result!,
               ),
           ],
         ),
